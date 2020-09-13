@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>{{ title }} - Steve's Python Project</title>
+    {% else %}
+    <title>Welcome to Steves python project</title>
+    {% endif %}
+</head>
+<body>
+    <div>
+        {% block navvie %}
+            {% include "includes/navbar.htm" %}
+        {% endblock %}
+    </div>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+    <div>
+        {% block test %}{% include "includes/test.htm" %}{% endblock %}
+    </div>
+</body>
+</html>
