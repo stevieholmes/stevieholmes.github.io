@@ -1,43 +1,246 @@
-body {
-    margin: 60px auto;
-    width: 70%;
+
+/* Colours:
+1: #eceff1
+2: #cfd8dc
+3: #b0bec5
+4: #90a4ae
+5: #78909c
+6: #607db8
+7: #546e7a
+8: #455a64
+9: #37474f
+10: #263238
+./End colours */
+
+
+
+
+
+html {
+  position: relative;
+  min-height: 100%;
 }
+
+
+body {
+  margin: 0 0 150px 0; /* Margin bottom by footer height */
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  background: radial-gradient(ellipse at top left, #fafafa, #c0c0c0);
+  color: #545454;
+  font-family: 'Roboto Slab', serif;
+  padding-top:90px;
+
+
+}
+
+
+@media (min-width:768px){
+  body{
+    padding-top:0;
+  }
+}
+
+@media (min-width:768px){
+  body{
+    padding-left:230px;
+  }
+}
+
+.navbar.fixed-left{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1030;
+  background-color: #37474f;
+  background: radial-gradient(ellipse at top left, #455a64, #263238);
+  transition: all 0.5s ease-out;
+}
+
+.nav-header{
+  color: #b0bec5;
+  font-weight: 600;
+}
+
+@media (min-width:768px){
+  .navbar.fixed-left{
+    bottom:0;
+    width:230px;
+    flex-flow:column nowrap;
+    align-items:flex-start;
+    background-color: transparent;
+    background: transparent;
+    transition: all 0.5s ease-out;
+  }
+  .navbar.fixed-left .navbar-collapse{
+    flex-grow:0;
+    flex-direction:column;
+    width:100%;
+  }
+  .navbar.fixed-left .navbar-collapse .navbar-nav{
+    flex-direction:column;
+    width:100%;
+  }
+  .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item{
+    width:100%;
+  }
+  .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu{
+    top:0;
+  }
+  
+  .nav-header{
+    color: #455a64;
+    font-weight: 600;
+  }
+}
+
+@media (min-width:768px){
+  .navbar.fixed-left{
+    right:auto;
+  }
+  .navbar.fixed-left .navbar-nav .nav-item .dropdown-toggle:after{
+    border-top:.3em solid transparent;
+    border-left:.3em solid;
+    border-bottom:.3em solid transparent;
+    border-right:none;
+    vertical-align:baseline;
+  }
+  .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu{
+    left:100%;
+  }
+}
+
+
+
+.steve{
+  font-size: 2rem;
+  font-weight: 100;
+  
+}
+.holmes{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  /* Set the fixed height of the footer here */
+  height: 150px;
+  background-color: #37474f;
+  color: #90a4ae;
+  background: radial-gradient(ellipse at top left, #455a64, #263238);
+  font-size: 1em;
+  padding: 2em;
+  width:100%;
+  left: 0;
+  right: 0;
+}
+
+.headerSpace{
+  height: 100px;
+}
+
+.navbar {
+  border-radius: 0;
+  transition: all 0.3s ease-out;
+  height: auto !important;
+}
+
+
+.affix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1030;
+}
+
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
     list-style: none;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+
+  margin-right: 20px;
 }
-a {
+
+.nav li.nav-item{
+text-align: left;
+line-height: 1rem;
+}
+
+.nav li.nav-item.active{
+  transition: all 0.5s ease-out;
+  }
+
+
+  .nav li.nav-item.active:hover{
+  transition: all 0.5s ease-out;
+    }
+
+.navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=607d8b');
+  transition: all 0.5s ease-out;
+  }
+  .navbar-toggler-icon:hover {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=90a4ae');
+    transition: all 0.5s ease-out;
+    }
+
+
+a, .dropdown-item {
+    color:#607d8b;
     text-decoration: none;
-    color: #999;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s ease-out;
 }
-a:hover {
-    text-decoration: underline;
+a:hover, a:focus, a:active {
+    color:#90a4ae;
+    border-bottom: 2px solid #607d8b;
+    transition: all 0.5s ease-out;
+    text-decoration: none;
 }
+
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    margin: 0 0 2.8rem 0;
 }
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
 }
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+.nav-item .menuicon {
+  color: #607d8b;
 }
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+.nav-item.active .menuicon {
+  color: #8b607d ;
 }
 
-ul.posts li {
-    list-style: none;
+
+
+	
+/***********************************email*********************************/
+
+
+.backToFront {
+  unicode-bidi:bidi-override;
+  direction:rtl;
 }
+  
+.stealthySymbol {
+  display:none;
+}
+  
+.domain:before {
+  content: ".";
+}
+
+.domain:after {
+  content: "@";
+}
+
+  /******************************** End email ******************************/
+  
+  
