@@ -120,6 +120,9 @@ body {
   box-shadow: 2px 2px 4px #000;
 }
 
+.disabled{
+  display:none;
+}
 .steve{
   font-size: 2rem;
   font-weight: 100;
