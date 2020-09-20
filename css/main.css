@@ -114,7 +114,11 @@ body {
   }
 }
 
-
+.cv{
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 2px 2px 4px #000;
+}
 
 .steve{
   font-size: 2rem;
